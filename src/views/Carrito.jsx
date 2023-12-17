@@ -4,16 +4,8 @@ import { PizzaContext } from "../context/PizzaContext"
 
 export const Carrito = () => {
 
-    const {cart, total, setTotal} = useContext(PizzaContext);
+    const {cart, total} = useContext(PizzaContext);
 
-    const getTotal = () =>{
-        
-        let total = 0;
-
-        for (let p of pizzaData){
-            setTotal(total += p.price)
-        }
-    }
   return (
     <div className="container d-flex flex-column justify-content-center align-items-between" style={{ height: "90vh", width: "70%" }}>
     <h3>Detalles del pedido</h3>
